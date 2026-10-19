@@ -97,10 +97,24 @@
       height: 112px;
       border: 0 !important;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16) !important;
+      background: transparent !important;
       border-radius: 8px;
       margin: 0 auto 5px auto !important;
       display: block;
       object-fit: cover;
+    }
+    .person-badge img[src*="Usman.png"],
+    .person-badge img[src*="Pavel.png"],
+    .person-badge img[src*="Armina.png"],
+    .person-badge img[src*="Mike.png"],
+    .person-badge-left img[src*="Usman.png"],
+    .person-badge-left img[src*="Pavel.png"],
+    .person-badge-left img[src*="Armina.png"],
+    .person-badge-left img[src*="Mike.png"] {
+      border-radius: 50% !important;
+      box-shadow: none !important;
+      background: transparent !important;
+      object-fit: contain;
     }
     .person-name {
       font-size: 13px;
@@ -215,11 +229,20 @@
     .tour-person img {
       width: 32px;
       height: 32px;
-      border-radius: 50%;
+      border-radius: 4px;
       object-fit: cover;
       margin: 0 !important;
-      border: 1.5px solid #93a1a1 !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      background: transparent !important;
       flex: 0 0 32px;
+    }
+    .tour-person img[src*="Usman.png"],
+    .tour-person img[src*="Pavel.png"],
+    .tour-person img[src*="Armina.png"],
+    .tour-person img[src*="Mike.png"] {
+      border-radius: 50% !important;
+      object-fit: contain;
     }
 
     /* =====================================================================
@@ -459,6 +482,8 @@
            COLUMN 2: THEME 1 — BRAIN CAUSALITY (FROM CAUSALTALK)
            ===================================================================== -->
       <section>
+        <section><h1>Brain Causality</h1></section>
+
         <!-- Slide 2.1: The Situation — Causal != Measurement Timescale -->
         <section>
           <h2>Causal $\ne$ Measurement Timescale</h2>
@@ -617,6 +642,8 @@
            COLUMN 3: THEME 2 — ARCHINTERP (FROM TALKINTERP & PRE-EMPT_KICKOFF)
            ===================================================================== -->
       <section>
+        <section><h1>ArchInterp</h1></section>
+
         <!-- Slide 3.1: AI for Knowledge Discovery -->
         <section data-vertical-align-top>
           <h2>AI for Knowledge Discovery</h2>
@@ -733,6 +760,8 @@
            COLUMN 4: THEME 3 — DECENTRALIZED ML & NEUROFLAME (FROM DECENTRALIZED_OHBM)
            ===================================================================== -->
       <section>
+        <section><h1>Decentralized ML</h1></section>
+
         <!-- Slide 4.1: Challenges of Federating Models (Interactive D3) -->
         <section id="cfm-slide" data-vertical-align-top>
           <h2>Challenges of Federating Models</h2>
@@ -830,6 +859,8 @@
            COLUMN 5: THEME 4 — BRAINCHOP (FROM DECENTRALIZEDHANYANG & TALKBRAINCHOP)
            ===================================================================== -->
       <section>
+        <section><h1>Brainchop</h1></section>
+
         <!-- Slide 5.1: brainchop: the other way (exact embedded video slide from https://neuroneural.net/decentralizedHanyang/#/0/13) -->
         <section class="bc-slide" data-cat="3"
                  data-background-video="figures/brainchop.mp4"
@@ -983,6 +1014,8 @@
            (Exact visual slides from MINT_theme1.html + NeurIPS 2026 SELF)
            ===================================================================== -->
       <section>
+        <section><h1>Fixed-Point AI</h1></section>
+
         <!-- Slide 6.1: Deep Learning is Ballistic (Animation — from MINT_theme1.html) -->
         <section data-background="figures/FP_ballistic.gif" data-background-size="cover">
           <h2>Deep Learning is Ballistic</h2>
