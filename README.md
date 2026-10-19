@@ -27,7 +27,7 @@ Whether you are interested in ML theory, privacy-preserving systems, or neuroima
    - Popov, P., Mahmood, U., Fu, Z., Yang, C., Calhoun, V., & Plis, S. (2024). *A simple but tough-to-beat baseline for fMRI time-series classification*. **NeuroImage**, 303:120909.
    - Popov, P. et al. (2026). *DECIFRA: Deep Interpretability with Causal Functional Graphs in Neuroimaging*. **IEEE Transactions on Medical Imaging (TMI)**, 2026 (In Press).
 
-3. **Decentralized ML & NeuroFLAME** — **Dr. Riyasat Ohib** (Defended; now at Google DeepMind) & **Bishal Thapaliya**
+3. **Decentralized ML & NeuroFLAME** — **Dr. Riyasat Ohib** (Defended; now at Google DeepMind)
    - Thapaliya, B., Ohib, R., Geenjaar, E., Liu, J., Calhoun, V., & Plis, S. M. (2024). *Efficient federated learning for distributed neuroimaging data*. **Frontiers in Neuroinformatics**, 18, p.1430987.
    - Ohib, R., Thapaliya, B., Dziugaite, G. K., Liu, J., Calhoun, V. D., & Plis, S. (2026). [*SSFL: Discovering Sparse Unified Subnetworks at Initialization for Efficient Federated Learning*](https://arxiv.org/abs/2405.09037). **Transactions on Machine Learning Research (TMLR)**, Jan 2026.
 
