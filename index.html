@@ -249,28 +249,48 @@
     .reveal .arch-pts strong { color: #41545d; }
     .reveal .arch-pts .sfm-punch { color: #C1500A; font-weight: 700; }
 
+    /* ===== Slide: IOFL guided reveal (aggregator -> single node -> whole figure) ===== */
+    .reveal .iofl-stack { position: relative; display: inline-block; margin-top: -15px; line-height: 0; }
+    .reveal .iofl-stack img { height: 560px; max-width: 100%; border: 0; box-shadow: none; background: none; display: block; margin: 0 !important; }
+    .reveal .iofl-base { opacity: 0.18; }
+    .reveal .iofl-layer { position: absolute; top: 0; left: 0; }
+
     /* =====================================================================
-       FULL-BLEED VIDEO OVERLAYS (BRAINCHOP & NEUROFLAME)
+       FULL-BLEED VIDEO OVERLAYS (BRAINCHOP & NEUROFLAME — FROM DECENTRALIZEDHANYANG)
        ===================================================================== */
     .reveal section.bc-slide { top: 0 !important; height: 100% !important; }
     .reveal .bc-overlay { position: absolute; inset: 0; z-index: 5; }
     .reveal .bc-caption {
       position: absolute; top: 6%; left: 3.5%; text-align: left; color: #fff;
-      background: rgba(0,0,0,.52); padding: 16px 26px; border-radius: 12px;
-      -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px);
+      background: rgba(0,0,0,.42); padding: 16px 26px; border-radius: 12px;
+      -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
     }
     .reveal .bc-caption .bc-title {
       font-family: "League Gothic", Impact, sans-serif;
       text-transform: uppercase; font-weight: normal; letter-spacing: normal;
-      font-size: 74px; line-height: 1; color: #fff;
+      font-size: 88px; line-height: 1; color: #fff;
     }
-    .reveal .bc-caption .bc-tags { font-size: 24px; margin-top: 8px; opacity: .95; color: #eee8d5; }
+    .reveal .bc-caption .bc-tags { font-size: 26px; margin-top: 10px; opacity: .92; color: #fff; }
     .reveal .bc-qr {
-      position: absolute; bottom: 8%; left: 3.5%;
-      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      position: absolute; bottom: 5%; left: 3.5%;
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
     }
-    .reveal .bc-qr img { height: 145px; width: 145px; border: 5px solid #fff; border-radius: 8px; box-shadow: 0 4px 18px rgba(0,0,0,.5); background:#fff; margin: 0 !important; }
-    .reveal .bc-qr span { font-size: 22px; font-weight: 700; color: #fff; background: rgba(0,0,0,.5); padding: 2px 10px; border-radius: 6px; }
+    .reveal .bc-qr img { height: 160px; width: 160px; border: 6px solid #fff; border-radius: 8px; box-shadow: 0 4px 18px rgba(0,0,0,.5); background:#fff; margin: 0 !important; }
+    .reveal .bc-qr span { font-size: 26px; font-weight: 700; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,.9); }
+
+    /* --- NeuroFLAME video close slide (mirrors brainchop treatment) --- */
+    .reveal .nf-caption {
+      position: absolute; bottom: 6%; left: 50%; transform: translateX(-50%);
+      text-align: center; color: #fff; white-space: nowrap;
+      background: rgba(0,0,0,.45); padding: 16px 34px; border-radius: 12px;
+      font-size: 44px; font-weight: 700;
+      -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+    }
+    .reveal .nf-qr { bottom: 16%; left: 0%; }
+    .reveal .nf-qr span {
+      background: rgba(0,0,0,.45); padding: 3px 12px; border-radius: 8px;
+      -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+    }
 
     /* =====================================================================
        FIXED-POINT SELF-ATTENTION SUMMARY TABLE
@@ -774,17 +794,31 @@
           </div>
         </section>
 
-        <!-- Slide 4.4: NeuroFLAME Demo Video (neuroflame.org) -->
-        <section class="bc-slide" data-hide-chrome
+        <!-- Slide 4.4: Inside-Out Federated Learning (from decentralizedHanyang #/0/12) -->
+        <section data-cat="1">
+          <h2>Inside-Out Federated Learning</h2>
+          <div class="iofl-stack">
+            <img class="iofl-base" src="figures/inside-out-FL_slide.svg" alt="Inside-Out Federated Learning schematic">
+            <img class="iofl-layer" src="figures/inside-out-FL_slide.svg" alt=""
+                 style="clip-path: inset(2% 30.1% 42.6% 0%);">
+            <img class="iofl-layer fragment fade-in" data-fragment-index="1"
+                 src="figures/inside-out-FL_slide.svg" alt=""
+                 style="clip-path: inset(2% 0% 42.6% 69.8%);">
+            <img class="iofl-layer fragment fade-in" data-fragment-index="2"
+                 src="figures/inside-out-FL_slide.svg" alt="">
+          </div>
+        </section>
+
+        <!-- Slide 4.5: NeuroFLAME video close (exact from decentralizedHanyang #/0/15) -->
+        <section class="bc-slide" data-cat="3"
                  data-background-video="figures/NeuroFLAME_demo_speeded.mp4"
                  data-background-video-loop data-background-video-muted
-                 data-background-size="contain" data-background-color="#000">
+                 data-background-size="cover">
           <div class="bc-overlay">
-            <div class="bc-caption">
-              <div class="bc-title">NeuroFLAME.org</div>
-              <div class="bc-tags">Decentralized Machine Learning &amp; Federated Neuroimaging Platform</div>
+            <div class="nf-caption">
+              Federated neuroimaging should be zero-footprint
             </div>
-            <div class="bc-qr">
+            <div class="bc-qr nf-qr">
               <img src="figures/neuroflame-qr-code.png" alt="neuroflame.org QR code">
               <span>neuroflame.org</span>
             </div>
@@ -793,10 +827,33 @@
       </section>
 
       <!-- =====================================================================
-           COLUMN 5: THEME 4 — BRAINCHOP (FROM TALKBRAINCHOP)
+           COLUMN 5: THEME 4 — BRAINCHOP (FROM DECENTRALIZEDHANYANG & TALKBRAINCHOP)
            ===================================================================== -->
       <section>
-        <!-- Slide 5.1: Motivation — Publications vs Models vs Tools -->
+        <!-- Slide 5.1: brainchop: the other way (exact embedded video slide from https://neuroneural.net/decentralizedHanyang/#/0/13) -->
+        <section class="bc-slide" data-cat="3"
+                 data-background-video="figures/brainchop.mp4"
+                 data-background-video-loop data-background-video-muted
+                 data-background-size="cover">
+          <div class="bc-overlay">
+            <div class="bc-caption">
+              <div class="bc-title">Another way</div>
+              <div class="bc-tags">small models &middot; zero-footprint &middot; instant load</div>
+            </div>
+            <div class="bc-qr">
+              <img src="figures/brainchop-qr-code.png" alt="brainchop.org QR code">
+              <span>brainchop.org</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 5.2: Interactive Brainchop demo (exact from https://neuroneural.net/decentralizedHanyang/#/0/14) -->
+        <section id="brainchop-demo" data-hide-chrome
+                 data-background-iframe="https://neuroneural.net/brainchop-test/"
+                 data-background-interactive>
+        </section>
+
+        <!-- Slide 5.3: Motivation — Publications vs Models vs Tools -->
         <section>
           <h2>The Deployment Gap</h2>
           <div style="display: flex; justify-content: center; gap: 80px; margin-top: 40px;">
@@ -823,31 +880,11 @@
           </div>
         </section>
 
-        <!-- Slide 5.2: Sovereignty — Ship the Model to the Browser -->
+        <!-- Slide 5.4: Sovereignty — Ship the Model to the Browser -->
         <section data-vertical-align-top>
           <h2>Data Sovereignty</h2>
           <p class="sub">keep clinical scans on the user&rsquo;s device &mdash; ship the tiny model to the browser</p>
           <img class="stretch" style="border:0; box-shadow:none; margin: 0;" src="figures/sovereignty_transparent.png" alt="Data Sovereignty">
-        </section>
-
-        <!-- Slide 5.3: Brainchop.org Live Video -->
-        <section class="bc-slide" data-hide-chrome
-                 data-background-video="figures/brainchop.mp4"
-                 data-background-video-loop data-background-video-muted
-                 data-background-size="contain" data-background-color="#000">
-          <div class="bc-overlay">
-            <div class="bc-caption">
-              <div class="bc-title"><a href="https://neuroneural.net/brainchop-test/" target="_blank" style="color:#fff;">Brainchop.org</a></div>
-              <div class="bc-tags">Client-side 3D MRI segmentation &middot; Zero server footprint &middot; WebGL / WebGPU</div>
-            </div>
-            <div class="bc-qr">
-              <img src="figures/brainchop-qr-code.png" alt="brainchop.org QR code">
-              <span>brainchop.org</span>
-            </div>
-          </div>
-          <div class="slide-footer" style="color: #eee8d5; background: rgba(0,0,0,0.6); padding: 4px 10px; border-radius: 4px; z-index: 10; bottom: 8px;">
-            Plis, S. M., Masoud, M., Hu, F., Hanayik, T., Ghosh, S. S., Drake, C., Newman-Norlund, R., &amp; Rorden, C. (2024). <strong>Aperture Neuro</strong>, 4:10-52294.
-          </div>
         </section>
 
         <!-- Slide 5.4: Global Adoption -->
@@ -1083,6 +1120,7 @@
       center: true,
       controls: true,
       keyboard: true,
+      navigationMode: 'linear',
       overview: true,
       transition: 'slide',
       transitionSpeed: 'fast',
