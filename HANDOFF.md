@@ -4,6 +4,8 @@ Updated: 2026-10-20. This file records the user's requirements and completed wor
 
 ## Project and working files
 
+- GitHub Pages is enabled with `build_type: workflow`, matching `causaltalk` and `talkinterp`. `.github/workflows/deploy.yml` deploys the repository root on pushes to `master` and supports manual dispatch. The public slide URL is `https://neuroneural.net/talkteam/`. No `gh-pages` branch is needed.
+
 - Workspace: `/Users/splis/Documents/talks/atlanta`
 - Presentation repository: `/Users/splis/Documents/talks/atlanta/talkteam`
 - Main deck: `/Users/splis/Documents/talks/atlanta/talkteam/index.html`
