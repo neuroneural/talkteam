@@ -1,6 +1,6 @@
 # talkteam handoff
 
-Updated: 2026-10-20. This file records the user's requirements and completed work. The causal learning section now follows the user's numbered screenshots. The user explicitly chose to skip number 7 and retain the equivalence-class slide as a hidden backup.
+Updated: 2026-10-21. This file records the user's requirements and completed work. The causal learning section now follows the user's numbered screenshots. The user explicitly chose to skip number 7 and retain the equivalence-class slide as a hidden backup.
 
 ## Project and working files
 
@@ -56,11 +56,11 @@ Current visible order, after the Brain Causality section title:
 11. GRACE-C: approximately 100 Variables (`#/grace-c`)
 12. Deliberate Undersampling (`#/deliberate-undersampling`)
 
-The two existing RnR slides follow this sequence (`#/rnr-pipeline`, `#/rnr-recovery`). The equivalence-class/theorem slide is retained in the source as `id="undersampling-equivalence-backup" data-visibility="hidden"`, excluded from normal presentation navigation. The user explicitly selected this treatment when asked about the missing screenshot 7.
+**Removed on 2026-10-21 at the user’s explicit request:** both RnR slides (Meta-Solver Under Noise and Value-Add & fMRI Recovery). Do not restore them. The visible causal section ends with Deliberate Undersampling and proceeds directly to ArchInterp. The equivalence-class/theorem slide is retained in the source as `id="undersampling-equivalence-backup" data-visibility="hidden"`, excluded from normal presentation navigation. The user explicitly selected this treatment when asked about the missing screenshot 7.
 
 Imported the original `simple_loops.png`, `edge_merging_tree.png`, `runtime_demo.png`, `clingo.png`, and `ASP.png` from `causaltalk/figures/`. The DBN and compressed graph figures were already present and matched the source exactly. All new paths are repository-relative.
 
-Deliberate Undersampling now has two cumulative fragments: the equivalence-class illustration above (`data-fragment-index="0"`), then the numerical heatmap below (`data-fragment-index="1"`). The original `du_gain.png` remains untouched. A CSS viewport clips its redundant paper caption while retaining the formula, axes, labels and colour bars. Kseniya's first-author credit, Sajad's portrait and the full paper citation remain. New layout styles are scoped to causal slides. Citation positioning was corrected on the effect, GRACE-C and RnR slides so their existing citations remain visible.
+Deliberate Undersampling now has two cumulative fragments: the equivalence-class illustration above (`data-fragment-index="0"`), then the numerical heatmap below (`data-fragment-index="1"`). The original `du_gain.png` remains untouched. A CSS viewport clips its redundant paper caption while retaining the formula, axes, labels and colour bars. Kseniya's first-author credit, Sajad's portrait and the full paper citation remain. New layout styles are scoped to causal slides. Citation positioning was corrected on the effect and GRACE-C slides so their existing citations remain visible. The RnR slides were subsequently removed.
 
 Browser inspection covered the requested slides and both deliberate-undersampling reveals. Original figures were preserved, assets resolved, and `git diff --check` passed. A byte comparison confirmed that all slides and scripts after the causal section, including FPSA, and all earlier slide markup and prior styles were unchanged. The user subsequently requested that all recent changes be committed and pushed.
 
@@ -70,7 +70,6 @@ Highlight **Sajad Abavisani** (Mohammadsajad Abavisani) and these papers, preser
 
 - Solovyeva, K., Danks, D., Abavisani, M., & Plis, S. (2023). *Causal learning through deliberate undersampling*. CLeaR 2023, PMLR 213:518–530. First author Kseniya Solovyeva. `https://proceedings.mlr.press/v213/solovyeva23a.html`
 - Abavisani, M., Danks, D., & Plis, S. M. (2023). *GRACE-C: Generalized rate agnostic causal estimation via constraints*. ICLR 2023.
-- Abavisani, M., Solovyeva, K., Danks, D., Calhoun, V. D., & Plis, S. (2026). *RnR: a meta-solver for causal discovery in undersampled time series data*. NeurIPS 2026 poster, as supplied by the user. `https://openreview.net/forum?id=f1Ye3BzygN`
 
 Portraits already used: `figures/Sajad.jpeg`, `figures/Xenia.jpeg` (Kseniya Solovyeva), and `figures/DavidDanks.jpeg`. Preserve the association between people and papers. Existing slide assertions are not a substitute for checking source material when changing a technical claim.
 

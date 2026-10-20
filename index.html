@@ -124,9 +124,7 @@
       margin: 0 auto;
     }
     .reveal .slides #undersampling-effect .slide-footer,
-    .reveal .slides #grace-c .slide-footer,
-    .reveal .slides #rnr-pipeline .slide-footer,
-    .reveal .slides #rnr-recovery .slide-footer {
+    .reveal .slides #grace-c .slide-footer {
       position: absolute;
       bottom: -22px;
       max-width: 100%;
@@ -934,51 +932,6 @@
             Solovyeva, K., Danks, D., Abavisani, M., &amp; Plis, S. (2023). <a href="https://proceedings.mlr.press/v213/solovyeva23a.html" target="_blank">Causal learning through deliberate undersampling.</a> <strong>CLeaR 2023</strong>, PMLR 213:518–530.
           </div>
           <aside class="notes">Solovyeva, Danks, Abavisani and Plis (CLeaR 2023), Figure 6. The gain is the base-10 logarithm of the ratio of the equivalence-class size for one rate to the size after intersecting two adjacent rates. Colours count graphs. Combining measurements at multiple rates can shrink the equivalence class. The formula and original paper caption are outside the displayed crop. The upper illustration distinguishes monotonic and non-monotonic steps, so a further undersampling step alone need not shrink an equivalence class.</aside>
-        </section>
-
-        <!-- Causal narrative: RnR pipeline -->
-        <section id="rnr-pipeline" data-vertical-align-top>
-          <div class="person-badge">
-            <img src="figures/Sajad.jpeg" alt="Sajad Abavisani">
-            <div class="person-name">Sajad Abavisani</div>
-            <div class="person-role"><strong>NeurIPS 2026</strong></div>
-          </div>
-          <div class="person-badge-left">
-            <img src="figures/Xenia.jpeg" alt="Kseniya Solovyeva">
-            <div class="person-name">Kseniya Solovyeva</div>
-            <div class="person-role">Postdoc, TReNDS</div>
-          </div>
-
-          <h2>RnR: Meta-Solver Under Noise</h2>
-          <p class="sub">wrapping any base estimator (PC, FCI, PCMCI, SVAR) to recover valid $\mathcal{G}^1$</p>
-          <img class="stretch" style="border:0; box-shadow:none; margin: 0;" src="figures/rnr.png" alt="RnR pipeline">
-          <div class="slide-footer">
-            Abavisani, M., Solovyeva, K., Danks, D., Calhoun, V. D., &amp; Plis, S. (2026). <a href="https://openreview.net/forum?id=f1Ye3BzygN" target="_blank">RnR: a meta-solver for causal discovery in undersampled time series data.</a> <strong>NeurIPS 2026</strong>.
-          </div>
-        </section>
-
-        <!-- Causal narrative: RnR results -->
-        <section id="rnr-recovery" data-vertical-align-top>
-          <div class="person-badge">
-            <img src="figures/Sajad.jpeg" alt="Sajad Abavisani">
-            <div class="person-name">Sajad Abavisani</div>
-            <div class="person-role"><strong>NeurIPS 2026</strong></div>
-          </div>
-
-          <h2>RnR: Value-Add &amp; fMRI Recovery</h2>
-          <row style="align-items: center; margin-top: 10px;">
-            <col50>
-              <div style="font-size: 0.44em; font-weight: 700; color: #41545d;">Universal Gain Across Base Estimators</div>
-              <img style="border:0; box-shadow:none; width: 95%; max-height: 440px; object-fit: contain; margin: 6px 0 0;" src="figures/rnr_value_add.svg" alt="RnR value add">
-            </col50>
-            <col50>
-              <div style="font-size: 0.44em; font-weight: 700; color: #41545d;">Resting-State fMRI Salience Network</div>
-              <img style="border:0; box-shadow:none; width: 95%; max-height: 440px; object-fit: contain; margin: 6px 0 0;" src="figures/salience.png" alt="Salience network">
-            </col50>
-          </row>
-          <div class="slide-footer">
-            Abavisani, M., Solovyeva, K., Danks, D., Calhoun, V. D., &amp; Plis, S. (2026). <a href="https://openreview.net/forum?id=f1Ye3BzygN" target="_blank">RnR: a meta-solver for causal discovery in undersampled time series data.</a> <strong>NeurIPS 2026</strong>.
-          </div>
         </section>
 
         <!-- Retained as a hidden backup, outside the numbered narrative. -->
