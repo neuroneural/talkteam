@@ -345,6 +345,28 @@
     /* =====================================================================
        INTERACTIVE D3 SLIDES (FROM DECENTRALIZED_OHBM & PRE-EMPT_KICKOFF)
        ===================================================================== */
+    /* Let the foundation-model chart use the spare side margins and full slide height. */
+    .reveal .slides #cfm-slide { height: 660px; box-sizing: border-box; }
+    .reveal #cfm-stage {
+      position: relative;
+      width: calc(100% + 160px);
+      margin-left: -80px;
+      margin-top: -8px;
+      line-height: 0;
+    }
+    .reveal #cfm-svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: none;
+    }
+    .reveal .slides #cfm-slide .slide-footer {
+      position: absolute;
+      bottom: -12px;
+      left: -20px;
+      max-width: calc(100% + 40px);
+    }
+
     .reveal .sfm-cols { display: flex; gap: 3%; align-items: center; margin-top: 4px; }
     .reveal .sfm-left { flex: 0 0 40%; text-align: left; }
     .reveal .sfm-left ul { list-style: none; margin: 0; padding: 0; display: block; width: 100%; }
@@ -1071,16 +1093,17 @@
         <!-- Slide 4.1: Challenges of Federating Models (Interactive D3) -->
         <section id="cfm-slide" data-vertical-align-top>
           <h2>Challenges of Federating Models</h2>
-          <div id="cfm-stage" style="position:relative; width:100%; margin-top:-24px;">
-            <svg id="cfm-svg" viewBox="0 0 1396 715" style="width:100%; height:auto; max-height:575px; background:none;"></svg>
+          <div id="cfm-stage">
+            <svg id="cfm-svg" viewBox="0 0 1396 715" style="background:none;"></svg>
           </div>
           <span class="fragment" data-cfm="1"></span>
           <span class="fragment" data-cfm="2"></span>
           <div class="slide-footer">
             Params: [<a href="https://arxiv.org/abs/2005.14165" target="_blank">GPT-3 175B</a>]
-            &middot; [<a href="https://arxiv.org/abs/2303.00915" target="_blank">BiomedCLIP</a>]
+            &middot; [<a href="https://arxiv.org/abs/2303.00915" target="_blank">BiomedCLIP ViT-B</a>]
             &middot; [<a href="https://www.nature.com/articles/s41593-026-02202-6" target="_blank">BrainIAC</a>]
             &middot; [<a href="https://openreview.net/forum?id=RwI7ZEfR27" target="_blank">BrainLM</a>]
+            &middot; frontier/open figures estimated
           </div>
         </section>
 
@@ -1709,10 +1732,11 @@
         var right = curSide !== 'L';
         var lblX = right ? cx + rr + 8 : cx - rr - 8;
         var lblAnchor = right ? 'start' : 'end';
+        var labelDy = rescaled ? d.ldy : 0;
 
         if (atNode) {
-          g.select('.cfm-name').transition().duration(T).attr('x', lblX).attr('y', cy - 4 + d.ldy).attr('text-anchor', lblAnchor).attr('opacity', rescaled && isData ? 0.4 : 1);
-          g.select('.cfm-val').transition().duration(T).attr('x', lblX).attr('y', cy + 15 + d.ldy).attr('text-anchor', lblAnchor).attr('opacity', rescaled && isData ? 0.5 : 1)
+          g.select('.cfm-name').transition().duration(T).attr('x', lblX).attr('y', cy - 4 + labelDy).attr('text-anchor', lblAnchor).attr('opacity', rescaled && isData ? 0.4 : 1);
+          g.select('.cfm-val').transition().duration(T).attr('x', lblX).attr('y', cy + 15 + labelDy).attr('text-anchor', lblAnchor).attr('opacity', rescaled && isData ? 0.5 : 1)
             .on('start', function () { d3.select(this).text(rescaled ? paramText(d) : d.dataLbl); });
           g.select('.cfm-sub').transition().duration(T).attr('opacity', 0);
         } else {

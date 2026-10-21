@@ -75,6 +75,10 @@ Portraits already used: `figures/Sajad.jpeg`, `figures/Xenia.jpeg` (Kseniya Solo
 
 Copy any newly used assets into `talkteam` and use repository-relative paths, so the destination deck remains portable. Preserve any needed animation or interaction from source slides. Do not modify unrelated sections just to accommodate the causal section.
 
+## Foundation-model chart layout correction (2026-10-21)
+
+The user flagged excess empty space on `#/cfm-slide/1` compared with the source at `https://neuroneural.net/decentralizedHanyang/#/cfm-slide/1`. This slide now uses a 1120px-wide chart stage (160px beyond the normal central content area) and a 660px slide height. Scoped CSS keeps the chart proportional, makes its legend larger and restores the citation footer inside the viewport. The source footer's BiomedCLIP ViT-B label and estimated-figures qualifier are retained. The data and reveal order are unchanged. Vertical offsets intended for the parameter-axis clusters now apply only in that state, keeping the first name reveal from crowding Claude and Qwen labels. Check the initial list, name reveal, parameter reveal and reverse navigation when changing this slide.
+
 ## Latest refinement: larger undersampling illustration and published MeanMLP comparison
 
 - Deliberate Undersampling retains two cumulative fragments. The first gives the upper illustration almost the full central slide width. On the second reveal it reduces to a 280px-high overview above the heatmap, still substantially larger than the earlier 190px version. Rewinding restores the enlarged first reveal. The heatmap keeps its previous width, axes, labels and colour bars. Its formula is retained in speaker notes, and the formula and redundant paper caption are clipped from the display to make room.
